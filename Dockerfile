@@ -2,21 +2,23 @@ FROM alpine:latest
 
 MAINTAINER Yan QiDong <yanqd0@outlook.com>
 
-ENV VERSION 0.23
-ENV HUGO_URL https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSION}_linux-64bit.tar.gz
+ENV HUGO_VERSION=0.23 \
+    HUGO_USER=hugo \
+    HUGO_SITE=/srv/hugo \
+    HUGO_HOME=/usr/local/share/hugo
 
-ADD ${HUGO_URL} /tmp/hugo.tar.gz
+ENV PATH=${HUGO_HOME}:$PATH \
+    HUGO_URL=https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
 
-RUN cd /tmp \
-        && tar -xz hugo.tar.gz \
-        && mv hugo /usr/local/bin/hugo \
-        && rm -rf /tmp/*
+ADD ${HUGO_URL} ${HUGO_HOME}
 
-# USER hugo
+RUN adduser ${HUGO_USER} -D
 
-WORKDIR /srv/hugo
+USER ${HUGO_USER}
 
-VOLUME /srv/hugo
+WORKDIR ${HUGO_SITE}
+
+VOLUME ${HUGO_SITE}
 
 EXPOSE 1313
 
