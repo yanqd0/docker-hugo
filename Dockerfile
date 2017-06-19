@@ -4,15 +4,17 @@ MAINTAINER Yan QiDong <yanqd0@outlook.com>
 
 ENV HUGO_VERSION=0.23 \
     HUGO_USER=hugo \
-    HUGO_SITE=/srv/hugo \
-    HUGO_HOME=/usr/local/share/hugo
+    HUGO_SITE=/srv/hugo
 
-ENV PATH=${HUGO_HOME}:$PATH \
-    HUGO_URL=https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
+ENV HUGO_URL=https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
 
-ADD ${HUGO_URL} ${HUGO_HOME}
+ADD ${HUGO_URL} /tmp/
 
-RUN adduser ${HUGO_USER} -D
+RUN cd /tmp \
+    && tar -xz *.tar.gz \
+    && mv hugo /usr/local/bin/ \
+    && rm -rf /tmp/* \
+    && adduser ${HUGO_USER} -D
 
 USER ${HUGO_USER}
 
