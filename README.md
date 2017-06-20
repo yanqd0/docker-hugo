@@ -7,9 +7,13 @@
 
 A hugo docker image built from Alpine.
 
+## Install
+
 ```sh
 docker pull yanqd0/hugo
 ```
+
+Docker Hub: <https://hub.docker.com/r/yanqd0/hugo/>
 
 ## Usage
 
