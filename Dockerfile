@@ -10,9 +10,8 @@ ENV HUGO_URL=https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}
 
 ADD ${HUGO_URL} /tmp/
 
-RUN cd /tmp \
-    && tar -xz *.tar.gz \
-    && mv hugo /usr/local/bin/ \
+RUN tar -xzf /tmp/*.tar.gz -C /tmp \
+    && mv /tmp/hugo /usr/local/bin/ \
     && rm -rf /tmp/* \
     && adduser ${HUGO_USER} -D
 
