@@ -1,0 +1,12 @@
+# vim: set shiftwidth=2 tabstop=2 softtabstop=-1 expandtab:
+
+version: '3'
+
+services:
+  hugo:
+    image: yanqd0/hugo
+    volumes:
+      - .:/srv/hugo
+    ports:
+      - 1313:1313
+    restart: unless-stopped
