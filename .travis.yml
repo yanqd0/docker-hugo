@@ -1,0 +1,30 @@
+# vim: set shiftwidth=2 tabstop=2 softtabstop=-1 expandtab:
+
+sudo: required
+
+language: python
+
+python:
+  - "3.6"
+
+branches:
+  only:
+    - master
+
+services:
+  - docker
+
+install:
+  - pip install docker-compose
+
+before_script:
+  - docker version
+  - docker-compose version
+
+script:
+  - docker build --tag hugo .
+  - docker run --rm hugo which hugo
+  - docker-compose up -d
+
+after_script:
+  - docker-compose down
