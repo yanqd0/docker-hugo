@@ -23,4 +23,4 @@ VOLUME ${HUGO_SITE}
 
 EXPOSE 1313
 
-CMD hugo server
+CMD ["hugo", "server", "--bind", "0.0.0.0"]
