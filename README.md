@@ -5,7 +5,9 @@
 [![Docker Stars](https://img.shields.io/docker/stars/yanqd0/hugo.svg)](https://hub.docker.com/r/yanqd0/hugo/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/yanqd0/hugo.svg)](https://hub.docker.com/r/yanqd0/hugo/)
 
-A hugo docker image built from Alpine.
+A [hugo] docker image built from Alpine.
+
+[hugo]:https://github.com/gohugoio/hugo/
 
 ## Install
 
@@ -17,7 +19,11 @@ Docker Hub: <https://hub.docker.com/r/yanqd0/hugo/>
 
 ## Usage
 
-There are two simple ways to use it, `docker run` or `docker-compose up`.
+There are two simple ways to use the image, `docker run` or `docker-compose up`.
+
+(If you want to know the usage of [hugo], see [gohugo.io].)
+
+[gohugo.io]:http://gohugo.io/
 
 ### docker run
 
@@ -57,6 +63,28 @@ There is a verified [docker-compose.yml] for example.
 
 [docker-compose.yml file]:https://docs.docker.com/compose/compose-file/
 [docker-compose.yml]:https://github.com/yanqd0/docker-hugo/blob/master/docker-compose.yml
+
+## Version
+
+| Name   | Version |
+| ----   | ------: |
+| Alpine | 3.6     |
+| hugo   | 0.23    |
+
+It is welcome to remind me about update by [issue].
+
+[issue]:https://github.com/yanqd0/docker-hugo/issues/new
+
+## Size
+
+| Status     | Size  |
+| ------     | ---:  |
+| Compressed | 11 MB |
+| Extracted  | 20 MB |
+
+I use the offical [releases] instead of compiling from source, so the image is very small.
+
+[releases]:https://github.com/gohugoio/hugo/releases
 
 ## License
 
