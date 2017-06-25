@@ -21,7 +21,7 @@ Docker Hub: <https://hub.docker.com/r/yanqd0/hugo/>
 
 There are two simple ways to use the image, `docker run` or `docker-compose up`.
 
-(If you want to know the usage of [hugo], see [gohugo.io].)
+(If you want to know the usage of [hugo], please visit [gohugo.io].)
 
 [gohugo.io]:http://gohugo.io/
 
@@ -69,7 +69,7 @@ There is a verified [docker-compose.yml] for example.
 | Name   | Version |
 | ----   | ------: |
 | Alpine | 3.6     |
-| hugo   | 0.23    |
+| hugo   | 0.24    |
 
 It is welcome to remind me about update by [issue].
 
