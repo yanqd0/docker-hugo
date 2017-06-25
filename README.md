@@ -15,11 +15,10 @@ A [hugo] docker image built from Alpine.
 docker pull yanqd0/hugo
 ```
 
-Docker Hub: <https://hub.docker.com/r/yanqd0/hugo/>
-
 ## Usage
 
-There are two simple ways to use the image, `docker run` or `docker-compose up`.
+There are two simple ways to use the image when developing,
+`docker run` or `docker-compose up`.
 
 (If you want to know the usage of [hugo], please visit [gohugo.io].)
 
@@ -27,17 +26,30 @@ There are two simple ways to use the image, `docker run` or `docker-compose up`.
 
 ### docker run
 
-In the hugo project, execute the command below:
+As the help of `hugo server` says:
+
+> Hugo provides its own webserver which builds and serves the site.
+> While hugo server is high performance, it is a webserver with limited options.
+> Many run it in production, but the standard behavior is for people to use it
+> in development and use a more full featured server such as Nginx or Caddy.
+>
+> `hugo server` will avoid writing the rendered and served content to disk,
+> preferring to store it in memory.
+
+The default command of this docker image is `hugo server`.
+
+When generating the `public` directory in the **production environment**,
+please specify the command to `hugo`.
 
 ```sh
-docker run -v $PWD:/srv/hugo -p 1313:1313 yanqd0/hugo
+docker run --rm -v $PWD:/srv/hugo yanqd0/hugo hugo
 ```
 
-If your current directory is not your hugo project, you can replace `$PWD` with the path.
+If the current directory is not the hugo project, you can replace `$PWD` with the path.
 
 ### docker-compose up
 
-It is not a good way to use `docker run` in your production environment.
+It may not be a convenient way to use `docker run` in the **development environment**.
 
 I prefer to use a [docker-compose.yml file].
 
@@ -71,7 +83,7 @@ There is a verified [docker-compose.yml] for example.
 | Alpine | 3.6     |
 | hugo   | 0.24    |
 
-It is welcome to remind me about update by [issue].
+It is welcome to remind me about updates by [issue].
 
 [issue]:https://github.com/yanqd0/docker-hugo/issues/new
 
@@ -82,7 +94,7 @@ It is welcome to remind me about update by [issue].
 | Compressed | 11 MB |
 | Extracted  | 20 MB |
 
-I use the offical [releases] instead of compiling from source, so the image is very small.
+I use the official [releases] instead of compiling from source, so the image is very small.
 
 [releases]:https://github.com/gohugoio/hugo/releases
 
