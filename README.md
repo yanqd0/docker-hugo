@@ -1,15 +1,15 @@
 # docker-hugo
 
-[![Docker Build Status](https://img.shields.io/docker/build/yanqd0/hugo.svg)](https://hub.docker.com/r/yanqd0/hugo/builds/)
-[![Docker Automated build](https://img.shields.io/docker/automated/yanqd0/hugo.svg)](https://hub.docker.com/r/yanqd0/hugo/builds/)
-[![Docker Stars](https://img.shields.io/docker/stars/yanqd0/hugo.svg)](https://hub.docker.com/r/yanqd0/hugo/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/yanqd0/hugo.svg)](https://hub.docker.com/r/yanqd0/hugo/)
-
 A [hugo] docker image built from Alpine.
 
 [hugo]:https://github.com/gohugoio/hugo/
 
 ## Install
+
+[![Docker Build Status](https://img.shields.io/docker/build/yanqd0/hugo.svg)](https://hub.docker.com/r/yanqd0/hugo/builds/)
+[![Docker Automated build](https://img.shields.io/docker/automated/yanqd0/hugo.svg)](https://hub.docker.com/r/yanqd0/hugo/builds/)
+[![Docker Stars](https://img.shields.io/docker/stars/yanqd0/hugo.svg)](https://hub.docker.com/r/yanqd0/hugo/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/yanqd0/hugo.svg)](https://hub.docker.com/r/yanqd0/hugo/)
 
 ```sh
 docker pull yanqd0/hugo
@@ -81,7 +81,7 @@ There is a verified [docker-compose.yml] for example.
 | Name   | Version |
 | ----   | ------: |
 | Alpine | 3.6     |
-| hugo   | 0.24.1  |
+| hugo   | 0.25    |
 
 It is welcome to remind me about updates by [issue].
 
