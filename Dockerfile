@@ -12,7 +12,6 @@ ADD ${HUGO_URL} /tmp/
 
 RUN tar -xzf /tmp/*.tar.gz -C /tmp \
     && mv /tmp/hugo /usr/local/bin/ \
-    && rm /var/cache/apk/* \
     && rm -rf /tmp/* \
     && adduser ${HUGO_USER} -D
 
