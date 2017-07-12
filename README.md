@@ -1,6 +1,6 @@
 # docker-hugo
 
-A [hugo] docker image built from Alpine.
+The smallest [hugo] image built from Alpine.
 
 [hugo]:https://github.com/gohugoio/hugo/
 
@@ -89,10 +89,10 @@ It is welcome to remind me about updates by [issue].
 
 ## Size
 
-| Status     | Size  |
-| ------     | ---:  |
-| Compressed | 11 MB |
-| Extracted  | 20 MB |
+| Status     | Size    |
+| ------     | ---:    |
+| Compressed | 6 MB    |
+| Extracted  | 16.2 MB |
 
 I use the official [releases] instead of compiling from source, so the image is very small.
 
