@@ -89,14 +89,16 @@ It is welcome to remind me about updates by [issue].
 
 ## Size
 
-| Status     | Size    |
-| ------     | ---:    |
-| Compressed | 6 MB    |
-| Extracted  | 16.2 MB |
+| Status     | Size                                |
+| ------     | ---:                                |
+| Compressed | [![][microbadger.svg]][microbadger] |
+| Extracted  | 16.2 MB                             |
 
 I use the official [releases] instead of compiling from source, so the image is very small.
 
 [releases]:https://github.com/gohugoio/hugo/releases
+[microbadger.svg]:https://images.microbadger.com/badges/image/yanqd0/hugo.svg
+[microbadger]:https://microbadger.com/images/yanqd0/hugo
 
 ## License
 
