@@ -6,16 +6,14 @@ ENV HUGO_VERSION=0.26 \
     HUGO_USER=hugo \
     HUGO_SITE=/srv/hugo
 
-ENV HUGO_URL=https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
-
 RUN apk update \
     && apk add curl \
-    && curl -L ${HUGO_URL} -o /tmp/hugo.tar.gz \
-    && tar -xzf /tmp/hugo.tar.gz -C /tmp \
+    && curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz \
+        | tar -xz -C /tmp \
     && mv /tmp/hugo /usr/local/bin/ \
     && apk del curl \
-    && rm -rf /tmp/* \
     && rm /var/cache/apk/* \
+    && rm -rf /tmp/* \
     && adduser ${HUGO_USER} -D
 
 USER ${HUGO_USER}
