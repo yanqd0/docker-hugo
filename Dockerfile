@@ -12,8 +12,11 @@ RUN apk --no-cache add curl \
         | tar -xz -C /tmp \
     && apk del curl \
     && mv /tmp/hugo /usr/local/bin/ \
-    && rm -rf /tmp/* \
-    && adduser ${HUGO_USER} -D
+    && mkdir -p ${HUGO_SITE} \
+    && addgroup ${HUGO_USER} \
+    && adduser -G ${HUGO_USER} -D ${HUGO_USER} \
+    && chown -R ${HUGO_USER}:${HUGO_USER} ${HUGO_SITE} \
+    && rm -rf /tmp/*
 
 USER ${HUGO_USER}
 
