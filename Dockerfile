@@ -7,9 +7,9 @@ ENV HUGO_VERSION=0.27 \
     HUGO_SITE=/srv/hugo
 
 RUN apk --no-cache add curl \
-    && curl -sSL --retry 3 \
-        https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz \
-        | tar -xz -C /tmp \
+    && curl -SL https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz \
+        -o /tmp/hugo.tar.gz \
+    && tar -xzf /tmp/hugo.tar.gz -C /tmp \
     && apk del curl \
     && mv /tmp/hugo /usr/local/bin/ \
     && mkdir -p ${HUGO_SITE} \
