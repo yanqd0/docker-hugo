@@ -104,6 +104,6 @@ I use the official [releases] instead of compiling from source, so the image is 
 
 [![License](https://img.shields.io/github/license/yanqd0/docker-hugo.svg)](https://github.com/yanqd0/docker-hugo/blob/master/LICENSE)
 
-> The MIT License (MIT)
+> MIT License
 >
-> Copyright (c) 2017 yanqd0@outlook.com
+> Copyright (c) 2017 Yan QiDong <yanqd0@outlook.com>
