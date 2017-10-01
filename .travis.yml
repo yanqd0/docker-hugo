@@ -28,3 +28,12 @@ script:
 
 after_script:
   - docker-compose down
+
+deploy:
+  provider: releases
+  api_key:
+    secure: jm5XXbrWTcWrDh9dVN8NQToDCWgrWCB/R1wIHoyt5dIgUejgnr0i20L8gg0AS6wvLxKAcFPFrUqpBTH12u1AmdR01ZpdxV6azCwmbDmdq5/kuVogQDbM8ERfSGrd8iYL3Q8Xd1dMqtr8+p2nQV2PcGmAU8ghNQOTa0uid6ba8x8Q2NjUHz8NTKsq3k7cJy1LaBMnEWkddyzdKtLsG7VpFAHnUE9+dgcfgJ8pYj0TPZpwOotdBLoyh1XglYsH490Yf2bzF9SFl6CwURpjkKIUMtEtNA4Vf15/qEWaEhu2j1i8dV6KHnVP3NPF+N9wDySXi7TVeEKBKUKS48b9qkZk9+l3iREB6HDFDe3iJM8qiO3v31Bq1hGyMqlRMEVJNAALuBWr/Z9ZwuIv7Ka2k5BEJ+69oZvlstCViGp1qG5uXAQybUwsFW9HdQlKPc02mj/BN+aAVZqISJrWzSjAc/ruRi5miUf3nO19taAgwVjijvLCSVpSITbEqdtZPIOIws/3MD9vKbwKWc6kA8BQKrF0D3XwTOjWSgmwh8Bqm6zRwpsEhehSqcSkNWZ0TfGsmwOg/V4BeBcwqKJJBrwAcCJ7aBjUOgU8YxuSiuOs0U6YYvonlUrFwTJtl0OhprH+VzuRH4lRsGP6FbnQRdlxgEMQw/uAve/HbktQ61xvVk+ezDA=
+  file: Dockerfile
+  on:
+    repo: yanqd0/docker-hugo
+    tags: true
