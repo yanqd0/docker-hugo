@@ -2,7 +2,7 @@ FROM alpine:3.6
 
 MAINTAINER Yan QiDong <yanqd0@outlook.com>
 
-ENV HUGO_VERSION=0.34 \
+ENV HUGO_VERSION=0.35 \
     HUGO_USER=hugo \
     HUGO_SITE=/srv/hugo
 
