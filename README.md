@@ -81,12 +81,12 @@ There is a verified [docker-compose.yml] for example.
 | Name   | Version |
 | ----   | ------: |
 | Alpine | 3.7     |
-| Hugo   | 0.37    |
+| Hugo   | 0.37.1  |
 | Git    | 2.15.0  |
 
-It is welcome to remind me about updates by [issue].
+It is welcome to remind me about updates by [issues].
 
-[issue]:https://github.com/yanqd0/docker-hugo/issues/new
+[issues]:https://github.com/yanqd0/docker-hugo/issues/new
 
 ## Size
 
