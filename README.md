@@ -93,7 +93,7 @@ It is welcome to remind me about updates by [issue].
 | Status     | Size                                |
 | ------     | ---:                                |
 | Compressed | [![][microbadger.svg]][microbadger] |
-| Extracted  | 54.2 MB                             |
+| Extracted  | 36.3 MB                             |
 
 I use the official [releases] instead of compiling from source, so the image is very small.
 
