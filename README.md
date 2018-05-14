@@ -81,7 +81,7 @@ There is a verified [docker-compose.yml] for example.
 | Name   | Version |
 | ----   | ------: |
 | Alpine | 3.7     |
-| Hugo   | 0.40.2  |
+| Hugo   | 0.40.3  |
 | Git    | 2.15.0  |
 
 It is welcome to remind me about updates by [issues].
