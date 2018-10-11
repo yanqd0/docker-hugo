@@ -80,7 +80,7 @@ There is a verified [docker-compose.yml] for example.
 
 | Name   | Version |
 | ----   | ------: |
-| Alpine | 3.7     |
+| Alpine | 3.8     |
 | Hugo   | 0.48    |
 | Git    | 2.15.0  |
 
