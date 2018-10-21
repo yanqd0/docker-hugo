@@ -26,6 +26,9 @@ VOLUME ${HUGO_SITE}
 
 EXPOSE 1313
 
-COPY entrypoint.sh /bin/
-
-ENTRYPOINT ["entrypoint.sh"]
+CMD ["su", "${HUGO_USER}", "-c", \
+    "hugo", "server", \
+    "--bind", "0.0.0.0", \
+    "--navigateToChanged", \
+    "--templateMetrics", \
+    "--buildDrafts"]
