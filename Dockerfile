@@ -16,7 +16,7 @@ RUN apk --no-cache add \
     && mv /tmp/hugo /usr/local/bin/ \
     && mkdir -p ${HUGO_SITE} \
     && addgroup ${HUGO_USER} \
-    && adduser -G ${HUGO_USER} -D ${HUGO_USER} \
+    && adduser -G ${HUGO_USER} -D ${HUGO_USER} -s /bin/sh \
     && chown -R ${HUGO_USER}:${HUGO_USER} ${HUGO_SITE} \
     && rm -rf /tmp/*
 
@@ -28,4 +28,4 @@ EXPOSE 1313
 
 COPY entrypoint.sh /bin/
 
-ENTRYPOINT ['/bin/entrypoint.sh']
+ENTRYPOINT ["entrypoint.sh"]
