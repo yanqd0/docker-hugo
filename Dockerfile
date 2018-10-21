@@ -20,15 +20,12 @@ RUN apk --no-cache add \
     && chown -R ${HUGO_USER}:${HUGO_USER} ${HUGO_SITE} \
     && rm -rf /tmp/*
 
-USER ${HUGO_USER}
-
 WORKDIR ${HUGO_SITE}
 
 VOLUME ${HUGO_SITE}
 
 EXPOSE 1313
 
-CMD hugo server --bind 0.0.0.0 \
-        --navigateToChanged \
-        --templateMetrics \
-        --buildDrafts
+COPY entrypoint.sh /bin/
+
+ENTRYPOINT ['/bin/entrypoint.sh']
