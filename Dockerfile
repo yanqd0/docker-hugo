@@ -2,7 +2,7 @@ FROM alpine:3.8
 
 MAINTAINER Yan QiDong <yanqd0@outlook.com>
 
-ENV HUGO_VERSION=0.49.2 \
+ENV HUGO_VERSION=0.50 \
     HUGO_SITE=/srv/hugo
 
 RUN apk --no-cache add \
