@@ -7,7 +7,6 @@ The smallest [hugo] image built from Alpine.
 ## Install
 
 [![Docker Build Status](https://img.shields.io/docker/build/yanqd0/hugo.svg)](https://hub.docker.com/r/yanqd0/hugo/builds/)
-[![Docker Automated build](https://img.shields.io/docker/automated/yanqd0/hugo.svg)](https://hub.docker.com/r/yanqd0/hugo/builds/)
 [![Docker Stars](https://img.shields.io/docker/stars/yanqd0/hugo.svg)](https://hub.docker.com/r/yanqd0/hugo/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/yanqd0/hugo.svg)](https://hub.docker.com/r/yanqd0/hugo/)
 
@@ -47,6 +46,12 @@ docker run --rm -v $PWD:/srv/hugo yanqd0/hugo hugo
 
 If the current directory is not the hugo project, you can replace `$PWD` with the path.
 
+Since the tag `0.50`, the `root` user is used to generate sites.
+Before that, a `hugo` user with the pid `1000` is used,
+which will cause a permission problem when generating a `public` directory.
+In face, a user in the group `docker` can also have the `root` permission inside the container.
+So it is unnecessary to use a non-root user to ensure safety.
+
 ### docker-compose up
 
 It may not be a convenient way to use `docker run` in the **development environment**.
@@ -67,7 +72,7 @@ services:
       - 1313:1313
 ```
 
-And then, run `docker-compose up -d`.
+Run `docker-compose up -d`, then a hugo server with many arguments in the port 1313 is serving.
 
 There is a verified [docker-compose.yml] for example.
 
@@ -81,7 +86,7 @@ There is a verified [docker-compose.yml] for example.
 | Name   | Version |
 | ----   | ------: |
 | Alpine | 3.8     |
-| Hugo   | 0.49.2  |
+| Hugo   | 0.50    |
 | Git    | 2.18.0  |
 
 It is welcome to remind me about updates by [issues].
@@ -93,7 +98,7 @@ It is welcome to remind me about updates by [issues].
 | Status     | Size                                |
 | ------     | ---:                                |
 | Compressed | [![][microbadger.svg]][microbadger] |
-| Extracted  | 40.8MB                              |
+| Extracted  | 40.9MB                              |
 
 I use the official [releases] instead of compiling from source, so the image is very small.
 
