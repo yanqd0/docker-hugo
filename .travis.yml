@@ -21,11 +21,7 @@ script:
   - docker build --tag hugo .
   - docker run --rm hugo which hugo
   - docker run --rm hugo hugo new site test
-  - docker-compose up -d
-
-after_script:
-  - docker-compose logs
-  - docker-compose down
+  - docker-compose config
 
 deploy:
   provider: releases
