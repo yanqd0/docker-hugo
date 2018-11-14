@@ -46,12 +46,6 @@ docker run --rm -v $PWD:/srv/hugo yanqd0/hugo hugo
 
 If the current directory is not the hugo project, you can replace `$PWD` with the path.
 
-Since the tag `0.50`, the `root` user is used to generate sites.
-Before that, a `hugo` user with the pid `1000` is used,
-which will cause a permission problem when generating a `public` directory.
-In face, a user in the group `docker` can also have the `root` permission inside the container.
-So it is unnecessary to use a non-root user to ensure safety.
-
 ### docker-compose up
 
 It may not be a convenient way to use `docker run` in the **development environment**.
@@ -105,6 +99,21 @@ I use the official [releases] instead of compiling from source, so the image is 
 [releases]:https://github.com/gohugoio/hugo/releases
 [microbadger.svg]:https://images.microbadger.com/badges/image/yanqd0/hugo.svg
 [microbadger]:https://microbadger.com/images/yanqd0/hugo
+
+## Change Log
+
+The image will update with hugo [releases].
+I will try to change less.
+
+Since the tag `0.50`, the `root` user is used to generate sites.
+Before that, a `hugo` user with the pid `1000` is used,
+which will cause a permission problem when generating a `public` directory.
+In face, a user in the group `docker` can also have the `root` permission inside the container.
+The `hugo server` should not be used in a production environment,
+so it is unnecessary to use a non-root user to ensure safety.
+
+Since the tag '0.30', a executable `git` is added to this image.
+Some functions needs `git`.
 
 ## License
 
