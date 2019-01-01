@@ -80,7 +80,7 @@ There is a verified [docker-compose.yml] for example.
 | Name   | Version |
 | ----   | ------: |
 | Alpine | 3.8     |
-| Hugo   | 0.52    |
+| Hugo   | 0.53    |
 | Git    | 2.18.0  |
 
 It is welcome to remind me about updates by [issues].
@@ -92,7 +92,7 @@ It is welcome to remind me about updates by [issues].
 | Status     | Size                                |
 | ------     | ---:                                |
 | Compressed | [![][microbadger.svg]][microbadger] |
-| Extracted  | 40.9MB                              |
+| Extracted  | 41MB                                |
 
 I use the official [releases] instead of compiling from source, so the image is very small.
 
