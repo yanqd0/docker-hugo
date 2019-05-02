@@ -1,6 +1,6 @@
 FROM alpine:3.9
 
-MAINTAINER Yan QiDong <yanqd0@outlook.com>
+LABEL maintainer='Yan QiDong <yanqd0@outlook.com>'
 
 ENV HUGO_VERSION=0.55.2 \
     HUGO_SITE=/srv/hugo
