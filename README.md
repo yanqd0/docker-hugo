@@ -80,7 +80,7 @@ There is a verified [docker-compose.yml] for example.
 | Name   | Version |
 | ----   | ------: |
 | Alpine | 3.9     |
-| Hugo   | 0.60.0  |
+| Hugo   | 0.60.1  |
 | Git    | 2.20.1  |
 
 It is welcome to remind me about updates by [issues].
@@ -92,7 +92,7 @@ It is welcome to remind me about updates by [issues].
 | Status     | Size                                |
 | ------     | ---:                                |
 | Compressed | [![][microbadger.svg]][microbadger] |
-| Extracted  | 54.8MB                              |
+| Extracted  | 61.1MB                              |
 
 I use the official [releases] instead of compiling from source, so the image is very small.
 
@@ -108,7 +108,7 @@ I will try to change less.
 Since the tag `0.50`, the `root` user is used to generate sites.
 Before that, a `hugo` user with the pid `1000` is used,
 which will cause a permission problem when generating a `public` directory.
-In face, a user in the group `docker` can also have the `root` permission inside the container.
+In fact, a user in the group `docker` can also have the `root` permission inside the container.
 The `hugo server` should not be used in a production environment,
 so it is unnecessary to use a non-root user to ensure safety.
 
@@ -121,4 +121,4 @@ Some functions needs `git`.
 
 > MIT License
 >
-> Copyright (c) 2017~2019 Yan QiDong <yanqd0@outlook.com>
+> Copyright (c) 2017~2020 Yan QiDong <yanqd0@outlook.com>
