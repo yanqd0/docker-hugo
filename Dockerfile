@@ -2,7 +2,7 @@ FROM alpine:3.11
 
 LABEL maintainer='Yan QiDong <yanqd0@outlook.com>'
 
-ENV HUGO_VERSION=0.69.1 \
+ENV HUGO_VERSION=0.69.2 \
     HUGO_SITE=/srv/hugo
 
 RUN apk --no-cache add \
