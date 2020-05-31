@@ -79,9 +79,9 @@ There is a verified [docker-compose.yml] for example.
 
 | Name   | Version |
 | ----   | ------: |
-| Alpine | 3.9     |
+| Alpine | 3.11    |
 | Hugo   | 0.63.2  |
-| Git    | 2.20.1  |
+| Git    | 2.24.3  |
 
 It is welcome to remind me about updates by [issues].
 
