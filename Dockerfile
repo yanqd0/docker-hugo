@@ -1,4 +1,4 @@
-FROM alpine:3.11
+FROM alpine:3.12
 
 LABEL maintainer='Yan QiDong <yanqd0@outlook.com>'
 
